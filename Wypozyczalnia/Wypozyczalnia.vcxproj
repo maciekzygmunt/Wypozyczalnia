@@ -37,6 +37,9 @@
     <ClInclude Include="..\Kod\Samochod.h" />
     <ClInclude Include="..\Kod\Wypozyczenie.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="baza_klientow.txt" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
