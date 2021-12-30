@@ -8,7 +8,8 @@ using namespace std;
 #include "Rezerwacja.h"
 
 void Klient::rejestracja(string imie, string nazwisko, string adres_email, string haslo, string numer_prawa_jazdy) {
-	ofstream zapis("baza_klientow.txt");
+	fstream zapis;
+	zapis.open("baza_klientow.txt", ios::out | ios::app);
 
 	zapis << imie << endl << nazwisko << endl << adres_email << endl << haslo << endl << numer_prawa_jazdy << endl;
 

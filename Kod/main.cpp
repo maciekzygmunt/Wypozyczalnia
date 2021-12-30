@@ -53,22 +53,25 @@ Wybor:
 		string nr_prawa_jazdy;
 		string haslo;
 
-		cout << "Wpisz imie:" << endl;
+		cout << "Wpisz imie: ";
 		cin >> imie;
 		cout << endl;
-		cout << "Wpisz nazwisko:" << endl;
+		cout << "Wpisz nazwisko: ";
 		cin >> nazwisko;
 		cout << endl;
-	Email: //tu cos nie gra bo od razu wywala ze bledny email i potem juz dziala dobrze
-		cout << "Wpisz email:" << endl;
+	Email:
+		cout << "Wpisz email: ";
 		cin >> email;
+		cout << endl; 
+
 		if (czy_email_poprawny(email)) {
-			cout << "Wpisz numer prawa jazdy:" << endl;
+			cout << "Wpisz numer prawa jazdy: ";
 			cin >> nr_prawa_jazdy;
 			cout << endl;
-			cout << "Wprowadz haslo:" << endl;
+			cout << "Wprowadz haslo: ";
 			cin >> haslo;
-			
+			cout << endl;
+
 			Klient nowy_klient;
 			nowy_klient.rejestracja(imie, nazwisko, email, haslo, nr_prawa_jazdy);
 
