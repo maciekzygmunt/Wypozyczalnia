@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 www
 wwwwee
 wew@wee.32
@@ -24,3 +25,10 @@ michal.w@pp.pl
 1222@qqq.qpq
 qqq
 qqqqqqqqqqqqq
+=======
+Zygmunt
+Maciej
+macw@faw.pl
+awfageag
+awf
+>>>>>>> fcc751e66c1fb7249aa0a2e98cadc12b64c1fc33
