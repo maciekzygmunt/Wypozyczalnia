@@ -16,6 +16,8 @@ class Samochod
 
 		Rezerwacja zarezerwuj();
 		void wyswietl_pojazd();
+		void set_samochod(string marka, string model, int ilosc_drzwi, string rodzaj_nadwozia, string numer_rejestracji, int cena_za_dobe);
+
 	private:
 		string marka;
 		string model;

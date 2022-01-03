@@ -1,27 +1,49 @@
 ﻿#include <iostream>
 #include <regex>
 #include <string>
-
-#include "Klient.h"
+#include <fstream>
 
 using namespace std;
 
+#include "Klient.h"
+#include "Samochod.h"
+
 void menu_start();
 
-void przegladanie_samochodow() {
+void przegladarka_samochodow() {
+	
 	system("CLS");
-	int a;
+	int wybor;
 	cout << "0. Powrot." << endl;
-	cout << "Aby zarezerwowac samochod wpisz jego numer" << endl;
 	cout << "Lista dostepnych samochodow:" << endl;
 
-	//tu trzeba zrobic to wczytywanie z pliku
-	cout << "1. Fiesta" << endl;
-	cout << "2. Opelek" << endl;
+	Samochod tablica[50];
 
+	string marka;
+	string model;
+	int ilosc_drzwi;
+	string rodzaj_nadwozia;
+	string numer_rejestracji;
+	int cena_za_dobe;
+
+	fstream odczyt;
+	odczyt.open("baza_samochodow.txt");
+
+	int i = 0;
+	while (!EOF) {
+		odczyt >> marka >> model >> ilosc_drzwi >> rodzaj_nadwozia >> numer_rejestracji >> cena_za_dobe;
+		tablica[i].set_samochod(marka,model,ilosc_drzwi,rodzaj_nadwozia,numer_rejestracji,cena_za_dobe);
+		i++;
+	}
+	odczyt.close();
+
+	//filtrowanie!!
+
+	cout << "Aby zarezerwowac samochod wpisz jego numer" << endl;
+	
 	cout << "Wybor: ";
-	cin >> a;
-	if (a == 0) {
+	cin >> wybor;
+	if (wybor == 0) {
 		menu_start();
 	}
 }
@@ -110,7 +132,7 @@ void menu_start() {
 	switch (wybor)
 	{
 	case 1:
-		przegladanie_samochodow();
+		przegladarka_samochodow();
 		break;
 
 	case 2:
