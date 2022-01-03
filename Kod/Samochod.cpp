@@ -13,7 +13,10 @@ Rezerwacja Samochod::zarezerwuj() {
 
 void Samochod::wyswietl_pojazd() {
 
-	cout << "Marka: " << marka << endl;
+	cout << marka << " " << model;
+	cout << " Ilosc drzwi: "<<ilosc_drzwi;
+	cout << " Rodzaj nadwozia: " << rodzaj_nadwozia;
+	cout << " Cena : " << cena_za_dobe << endl;
 }
 
 void Samochod::set_samochod(string _marka, string _model, int _ilosc_drzwi, string _rodzaj_nadwozia, string _numer_rejestracji, int _cena_za_dobe) {

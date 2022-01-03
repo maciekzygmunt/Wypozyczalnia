@@ -14,7 +14,7 @@ class Klient
 {
 	public:
 
-		void rejestracja(string imie, string nazwisko, string adres_email, string haslo, string numer_prawa_jazdy);
+		void rejestracja();
 		void zaplac(Rezerwacja rezerwacja);
 	private:
 		string imie;

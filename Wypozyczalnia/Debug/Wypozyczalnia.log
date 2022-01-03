@@ -1,4 +1,6 @@
-﻿  main.cpp
-C:\Users\wojci\OneDrive\Dokumenty\Wypozyczalnia_samochodow\Projekt\Kod\main.cpp(292,3): warning C4551: wywołaniu funkcji brakuje listy argumentów
-  LINK : nie znaleziono elementu C:\Users\wojci\OneDrive\Dokumenty\Wypozyczalnia_samochodow\Projekt\Debug\Wypozyczalnia.exe ani nie został on skompilowany podczas ostatniego konsolidowania przyrostowego; zostanie wykonana pełna konsolidacja
+﻿  Klient.cpp
+  Pracownik.cpp
+  main.cpp
+C:\Users\wojci\OneDrive\Dokumenty\Wypozyczalnia_samochodow\Projekt\Kod\main.cpp(178,3): warning C4551: wywołaniu funkcji brakuje listy argumentów
+  Generowanie kodu...
   Wypozyczalnia.vcxproj -> C:\Users\wojci\OneDrive\Dokumenty\Wypozyczalnia_samochodow\Projekt\Debug\Wypozyczalnia.exe

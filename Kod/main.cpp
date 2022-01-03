@@ -1,18 +1,22 @@
 ﻿#include <iostream>
 #include <regex>
 #include <string>
-
 #include <fstream>
-
 #include <locale.h>
-#include "Klient.h"
+
 
 using namespace std;
 
 #include "Klient.h"
 #include "Samochod.h"
+#include "Pracownik.h"
+#include "Menedzer.h"
 
 void menu_start();
+
+void filtruj_samochody() {
+
+}
 
 void przegladarka_samochodow() {
 	
@@ -21,22 +25,26 @@ void przegladarka_samochodow() {
 	cout << "0. Powrot." << endl;
 	cout << "Lista dostepnych samochodow:" << endl;
 
-	Samochod tablica[50];
+	Samochod flota_samochodow[100];
 
 	string marka;
 	string model;
-	int ilosc_drzwi;
+	int ilosc_drzwi=0;
 	string rodzaj_nadwozia;
 	string numer_rejestracji;
-	int cena_za_dobe;
+	int cena_za_dobe=0;
 
-	fstream odczyt;
-	odczyt.open("baza_samochodow.txt");
+	ifstream odczyt("baza_samochodow.txt");
 
 	int i = 0;
-	while (!EOF) {
+	while (!odczyt.eof()) {
+		
 		odczyt >> marka >> model >> ilosc_drzwi >> rodzaj_nadwozia >> numer_rejestracji >> cena_za_dobe;
-		tablica[i].set_samochod(marka,model,ilosc_drzwi,rodzaj_nadwozia,numer_rejestracji,cena_za_dobe);
+
+		flota_samochodow[i].set_samochod(marka, model, ilosc_drzwi, rodzaj_nadwozia, numer_rejestracji, cena_za_dobe);
+		
+		flota_samochodow[i].wyswietl_pojazd();
+		
 		i++;
 	}
 	odczyt.close();
@@ -52,116 +60,19 @@ void przegladarka_samochodow() {
 	}
 }
 
-bool czy_email_poprawny(const string& email){
-	
-	// define a regular expression
-	const regex wzor ("(\\w+)(\\.|_)?(\\w*)@(\\w+)(\\.(\\w+))+");
-
-	// try to match the string with the regular expression
-	return regex_match(email, wzor);
-}
-
-void formularz_rejestracji() {
-	system("CLS");
-	int wybor;
-	cout << "0. Powrot" << endl;
-	cout << "1. Formularz rejestracji" << endl;
-Wybor:
-	cout << "Wybor: ";
-	cin >> wybor;
-	if (wybor == 0) {
-		menu_start();
-	}
-	else if (wybor == 1) {
-		string imie;
-		string nazwisko;
-		string email;
-		string nr_prawa_jazdy;
-		string haslo;
-
-		cout << "Wpisz imie: ";
-		cin >> imie;
-		cout << endl;
-		cout << "Wpisz nazwisko: ";
-		cin >> nazwisko;
-		cout << endl;
-	Email:
-		cout << "Wpisz email: ";
-		cin >> email;
-		cout << endl; 
-
-		if (czy_email_poprawny(email)) {
-			cout << "Wpisz numer prawa jazdy: ";
-			cin >> nr_prawa_jazdy;
-			cout << endl;
-			cout << "Wprowadz haslo: ";
-			cin >> haslo;
-			cout << endl;
-
-			Klient nowy_klient;
-			nowy_klient.rejestracja(imie, nazwisko, email, haslo, nr_prawa_jazdy);
-
-			system("cls");
-			cout << "Poprawnie zarejestrowano uzytkownika " << imie << " " << nazwisko << endl;
-			system("pause");
-		}
-		else {
-			cout << "Niepoprawny adres email. Sprobuj ponownie." << endl;
-			goto Email;
-		}
-	}
-	else {
-		cout << "Wybrano zla wartosc. Sprobuj ponownie." << endl;
-		goto Wybor;
-	}
-
-	menu_start();
-}
-
-void dodaj_nowy_samochod() {
-	string marka;
-	string model;
-	int ilosc_drzwi;
-	string rodzaj_nadwozia;
-	Rezerwacja rezerwacje[10]; // ?
-	string numer_rejestracji;
-	int cena_za_dobe;
-
-	cout << "Marka samochodu:" << endl;
-	cin >> marka;
-	cout << endl;
-	cout << "Model samochodu:" << endl;
-	cin >> model;
-	cout << endl;
-	cout << "Ilosc drzwi:" << endl;
-	cin >> ilosc_drzwi;
-	cout << endl;
-	cout << "Rodzaj nadwozia:" << endl;
-	cin >> rodzaj_nadwozia;
-	cout << endl;
-	cout << "Numer rejestracji:" << endl;
-	cin >> numer_rejestracji;
-	cout << endl;
-	cout << "Cena za dobe:" << endl;
-	cin >> cena_za_dobe;
-	cout << endl;
-
-	//tu chyba to samo co z klientem czyli nowy obiekt ->  funkcja dodanie ktorej nie ma
-}
-
 void zarzadzaj_baza() {
 	system("CLS");
 	string haslo = "AGH";
 	string wpis;
 	cout << "Aby zarzadzac baza musisz sie zalogowac." << endl;
 	cout << "Login: Daniel Wółkowicz" << endl;
-Haslo:	
-	cout << "Hasło: ";
-	cin >> wpis;
+	
 	while (haslo != wpis) {
+		cout << "Hasło: ";
+		cin >> wpis;
 		cout << "Bledne haslo sprobuj ponownie." << endl;
-		goto Haslo;
 	}
+	Menedzer m1;
 Lista:
 	system("CLS");
 	int a;
@@ -181,87 +92,71 @@ Lista:
 		menu_start();
 		break;
 	case 1:
-		dodaj_nowy_samochod();
+		m1.dodaj_samochod();
+		zarzadzaj_baza();
 		break;
 	case 2:
 		int b;
 		cout << "0. Powrot." << endl;
 		cout << "1. Usun samochod" << endl;
 		cout << "2. Edytuj samochod" << endl;
+		
 		cout << "Wybor:";
-		cin >> b;					//tu trzeba to z baza polaczyc
+		cin >> b;					//tu trzeba to z baza polaczyc - usuwanie i edycja
+		
 		switch (b) {
 		case 0:
 			goto Lista;
+			break;
+		case 1:
+			//usuwanie
+			break;
+		case 2:
+			//edycja
+			break;
 		}
 	}
 
 }
-
-void formularz_wydania_samochodu() {
-	string imie;
-	string nazwisko;
-	string nr_prawa_jazdy;
-	cout << "Wpisz imie klienta: ";
-	cin >> imie;
-	cout << endl;
-	cout << "Wpisz nazwisko klienta: ";
-	cin >> nazwisko;
-	cout << endl;
-	cout << "Wpisz numer prawa jazdy klienta: ";
-	cin >> nr_prawa_jazdy;
-	cout << endl;
-
-	//i tu wywolywamy funkcje wypozycz z rezerwacja?
-}
-
-void wydaj_samochod() {
+void wydawanie_samochodu() {
 	system("CLS");
+
 	string haslo = "AGH";
 	string wpis;
+
 	cout << "Aby wypelnic formularz wydania samochodu musisz sie zalogowac." << endl;
-	cout << "Login: Wojciech Michjcik" << endl;
-Haslo:
-	cout << "Hasło: ";
-	cin >> wpis;
+	cout << "Login: Wojciech Michalik" << endl;
+
 	while (haslo != wpis) {
+		cout << "Hasło: ";
+		cin >> wpis;
 		cout << "Bledne haslo sprobuj ponownie." << endl;
-		goto Haslo;
 	}
 	system("CLS");
-Wybor:
-	int wybor;
-
-	cout << "0. Powrot" << endl;
-	cout << "1. Formularz wydania samochodu."<< endl<<"Wybor: ";
-	cin >> wybor;
-	switch (wybor) {
-	case 0:
-		menu_start();
-		break;
-	case 1:
-		formularz_wydania_samochodu();
-		break;
-	default:
-		cout << "Wybrano nieprawidlowa opcje." << endl;
-		goto Wybor;
-	}
+	
+	Pracownik p1;
+	//p1.wydanie_samochodu();
 }
 
 void menu_start() {
 	system("CLS");
 	int wybor;
-	cout << "Witaj w wypozyczalni Ultra Flota" << endl;
-	cout << "Wybierz co chcesz zrobic." << endl;
-	cout << "1. Przegladaj samochody." << endl;
-	cout << "2. Zarejestruj sie." << endl;
-	cout << "3. Zmien termin najmu." << endl;
-	cout << "4. Odbierz samochod. (Wymagane konto pracownika)" << endl;
-	cout << "5. Wydaj samochod. (Wymagane konto pracownika)" << endl;
-	cout << "6. Zarzadzaj baza pojazdow. (Wymagane konto menedzera)" << endl;
-	cout << "7. Wyjdz." << endl;
-	cout << "Wybierz opcje (podajac jej numer): ";
-	cin >> wybor;
+	{
+		cout << "Witaj w wypozyczalni Ultra Flota" << endl;
+		cout << "Wybierz co chcesz zrobic." << endl;
+		cout << "1. Przegladaj samochody." << endl;
+		cout << "2. Zarejestruj sie." << endl;
+		cout << "3. Zmien termin najmu." << endl;
+		cout << "4. Odbierz samochod. (Wymagane konto pracownika)" << endl;
+		cout << "5. Wydaj samochod. (Wymagane konto pracownika)" << endl;
+		cout << "6. Zarzadzaj baza pojazdow. (Wymagane konto menedzera)" << endl;
+		cout << "7. Wyjdz." << endl;
+		cout << "Wybierz opcje (podajac jej numer): ";
+		cin >> wybor;
+	}
+	
+	Klient nowy;
+	Pracownik p1;
 
 	switch (wybor)
 	{
@@ -270,7 +165,8 @@ void menu_start() {
 		break;
 
 	case 2:
-		formularz_rejestracji();
+		nowy.rejestracja();
+		menu_start();
 		break;
 
 	case 3:
@@ -282,7 +178,7 @@ void menu_start() {
 		break;
 
 	case 5:
-		wydaj_samochod();
+		wydawanie_samochodu();
 		break;
 
 	case 6:
@@ -299,8 +195,6 @@ void menu_start() {
 
 int main() {
 	setlocale(LC_CTYPE, "Polish"); //wyswietlanie polskich znakow
-
+	
 	menu_start();
-
 }
-
