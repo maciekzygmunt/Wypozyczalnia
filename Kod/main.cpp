@@ -4,7 +4,6 @@
 #include <fstream>
 #include <locale.h>
 
-
 using namespace std;
 
 #include "Klient.h"
@@ -135,9 +134,28 @@ void wydawanie_samochodu() {
 	system("CLS");
 	
 	Pracownik p1;
-	//p1.wydanie_samochodu();
+	//p1.wydanie_samochodu(samochod);
 }
 
+void odbieranie_samochodu() {
+	system("CLS");
+
+	string haslo = "AGH";
+	string wpis;
+
+	cout << "Aby wypelnic formularz odbioru samochodu musisz sie zalogowac." << endl;
+	cout << "Login: Wojciech Michalik" << endl;
+
+	while (haslo != wpis) {
+		cout << "Hasło: ";
+		cin >> wpis;
+		cout << "Bledne haslo sprobuj ponownie." << endl;
+	}
+	system("CLS");
+
+	Pracownik p1;
+	//p1.odbior_samochodu(samochod);
+}
 void menu_start() {
 	system("CLS");
 	int wybor;
@@ -174,7 +192,7 @@ void menu_start() {
 		break;
 
 	case 4:
-		//jakiś kod
+		odbieranie_samochodu();
 		break;
 
 	case 5:
@@ -195,6 +213,5 @@ void menu_start() {
 
 int main() {
 	setlocale(LC_CTYPE, "Polish"); //wyswietlanie polskich znakow
-	
 	menu_start();
 }
