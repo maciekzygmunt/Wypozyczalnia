@@ -1,3 +1,1 @@
-﻿Samochod.obj : warning LNK4099: nie znaleziono pliku PDB „vc143.pdb” z elementem „Samochod.obj” lub w pozycji „C:\Users\wojci\OneDrive\Dokumenty\Wypozyczalnia_samochodow\Projekt\Debug\vc143.pdb”; obiekt zostanie skonsolidowany bez informacji debugowania
-Pracownik.obj : warning LNK4099: nie znaleziono pliku PDB „” z elementem „Pracownik.obj” lub w pozycji „”; obiekt zostanie skonsolidowany bez informacji debugowania
-LINK : fatal error LNK1103: uszkodzone informacje debugowania; skompiluj ponownie moduł
+﻿  Wypozyczalnia.vcxproj -> C:\Users\wojci\OneDrive\Dokumenty\Wypozyczalnia_samochodow\Projekt\Debug\Wypozyczalnia.exe
