@@ -79,5 +79,10 @@ Wybor:
 }
 
 void Klient::zaplac(Rezerwacja rezerwacja) {
-	throw "Not yet implemented";
+	
+	int kwota_tranzakcji = rezerwacja.get_koszt();
+
+	cout << "Kwota tranzakcji: " << kwota_tranzakcji << " zl" << endl;
+	cout << "Przejdz do strony platnosci" << endl;
+	system("pause");
 }
