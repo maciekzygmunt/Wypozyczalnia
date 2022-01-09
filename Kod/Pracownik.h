@@ -15,7 +15,10 @@ class Pracownik;
 class Pracownik
 {
 	public:
-
+		Pracownik();
+		Pracownik(string _login, string _haslo);
+		string get_login();
+		string get_haslo();
 		void wydanie_samochodu(Samochod samochod);
 		void odbior_samochodu(Samochod samochod);
 		void zmiana_terminu_najmu(Rezerwacja rezerwacja);

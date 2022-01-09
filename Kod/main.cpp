@@ -121,11 +121,12 @@ Lista:
 void wydawanie_samochodu() {
 	system("CLS");
 
-	string haslo = "AGH";
+	Pracownik p1("Wojciech Michalik", "AGH");
+	string haslo = p1.get_haslo();
 	string wpis;
 
 	cout << "Aby wypelnic formularz wydania samochodu musisz sie zalogowac." << endl;
-	cout << "Login: Wojciech Michalik" << endl;
+	cout << "Login: " << p1.get_login() << endl;
 
 	while (haslo != wpis) {
 		cout << "Hasło: ";
@@ -134,18 +135,19 @@ void wydawanie_samochodu() {
 	}
 	system("CLS");
 	
-	Pracownik p1;
+	//Pracownik p1;
 	//p1.wydanie_samochodu(samochod);
 }
 
 void odbieranie_samochodu() {
 	system("CLS");
 
-	string haslo = "AGH";
+	Pracownik p1("Wojciech Michalik","AGH");
+	string haslo = p1.get_haslo();
 	string wpis;
 
 	cout << "Aby wypelnic formularz odbioru samochodu musisz sie zalogowac." << endl;
-	cout << "Login: Wojciech Michalik" << endl;
+	cout << "Login: " << p1.get_login()<< endl;
 
 	while (haslo != wpis) {
 		cout << "Hasło: ";
@@ -154,7 +156,6 @@ void odbieranie_samochodu() {
 	}
 	system("CLS");
 
-	Pracownik p1;
 	//p1.odbior_samochodu(samochod);
 }
 
