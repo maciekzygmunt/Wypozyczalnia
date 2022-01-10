@@ -12,11 +12,11 @@ Rezerwacja Samochod::zarezerwuj() {
 	system("CLS");
 	cout << "Nowa rezerwacja" << endl;
 
-	cout << "Podaj date poczatku rezerwacji: " << endl;
+	cout << "Podaj date poczatku rezerwacji (dd mm rrrr): " << endl;
 	cin >> dzien >> miesiac >> rok;
 	Data poczatek_rezerwacji(dzien, miesiac, rok);
 
-	cout << "Podaj date konca rezerwacji: " << endl;
+	cout << "Podaj date konca rezerwacji (dd mm rrrr): " << endl;
 	cin >> dzien >> miesiac >> rok;
 	Data koniec_rezerwacji(dzien, miesiac, rok);
 

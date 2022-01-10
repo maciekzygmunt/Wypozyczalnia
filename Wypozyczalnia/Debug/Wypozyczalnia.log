@@ -1,11 +1,2 @@
-﻿  Data.cpp
-  Klient.cpp
-  Menedzer.cpp
-  Pracownik.cpp
-  Rezerwacja.cpp
-  Samochod.cpp
-  Wypozyczenie.cpp
-  main.cpp
-C:\Users\wojci\OneDrive\Dokumenty\Wypozyczalnia_samochodow\Projekt\Kod\main.cpp(213,3): warning C4551: wywołaniu funkcji brakuje listy argumentów
-  Generowanie kodu...
+﻿  Samochod.cpp
   Wypozyczalnia.vcxproj -> C:\Users\wojci\OneDrive\Dokumenty\Wypozyczalnia_samochodow\Projekt\Debug\Wypozyczalnia.exe

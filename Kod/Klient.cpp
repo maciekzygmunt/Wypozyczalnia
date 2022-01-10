@@ -58,7 +58,7 @@ Wybor:
 			fstream zapis;
 			zapis.open("baza_klientow.txt", ios::out | ios::app);
 
-			zapis << imie << endl << nazwisko << endl << adres_email << endl << haslo << endl << numer_prawa_jazdy << endl;
+			zapis << imie << endl << nazwisko << endl << email << endl << haslo << endl << nr_prawa_jazdy << endl;
 
 			zapis.close();
 

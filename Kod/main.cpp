@@ -39,7 +39,7 @@ void przegladarka_samochodow() {
 		odczyt >> marka >> model >> ilosc_drzwi >> rodzaj_nadwozia >> numer_rejestracji >> cena_za_dobe;
 
 		flota_samochodow[i].set_samochod(marka, model, ilosc_drzwi, rodzaj_nadwozia, numer_rejestracji, cena_za_dobe);
-		cout << i+1 << ". : ";
+		cout << i+1 << ". ";
 		flota_samochodow[i].wyswietl_pojazd();
 		
 		i++;
