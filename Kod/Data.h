@@ -14,7 +14,15 @@ class Data
 
 		void wyswietl_date(Data data);
 
+		/**
+		* Zapisuje obiekt typu data do pliku baza_rezerwacji.txt
+		* <p>
+		* Metoda otwiera strumieñ wyjœciowy na plik baza_rezerwacji.txt. Zapisuje kolejno dzieñ, miesi¹c i rok w kolejnych wierszach pliku,
+		* po czym zamyka strumieñ. Metoda uzywana do zapisu do pliku obiektów typu {@link Rezerwacja} i {@link Wypo¿yczenie}.
+		* @return void
+		*/
 		void zapisz();
+
 	private:
 		int dzien;
 		int miesiac;

@@ -9,6 +9,14 @@ using namespace std;
 #include "Klient.h"
 #include "Rezerwacja.h"
 
+/**
+* Sprawdza czy podany w argumencie email jest zgodny z wyra¿eniem regularnym i zwraca wartoœæ logiczna prawda lub fa³sz.
+* <p>
+* Funkcja sprawdza czy w podanym ci¹gu znaków wystêpuja kolejno "@"  i "." oddizelone przynajmiej jednym znakiem.
+* 
+* @param email adres email zapisany w zmiennej typu string
+* @return bool wartoœæ logiczna prawda lub fa³sz
+*/
 bool czy_email_poprawny(const string& email) {
 
 	// define a regular expression

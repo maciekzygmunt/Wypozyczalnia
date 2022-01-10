@@ -40,7 +40,8 @@ void Rezerwacja::zmiana_terminu_najmu() {
 
 int Rezerwacja::oblicz_koszt(int cena_za_dobe) {
 	int koszt = 120;
-	
+	//obliczanie kosztu na podstawie roznicy w dniach miedzy dwoma datami
+
 	return koszt;
 }
 
