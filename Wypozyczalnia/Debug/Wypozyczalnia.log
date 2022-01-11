@@ -1,1 +1,3 @@
-﻿  Wypozyczalnia.vcxproj -> C:\Users\wojci\OneDrive\Dokumenty\Wypozyczalnia_samochodow\Projekt\Debug\Wypozyczalnia.exe
+﻿  main.cpp
+D:\Studia\Wypozyczalnia\Wypozyczalnia\Kod\main.cpp(309,3): warning C4551: wywołaniu funkcji brakuje listy argumentów
+  Wypozyczalnia.vcxproj -> D:\Studia\Wypozyczalnia\Wypozyczalnia\Debug\Wypozyczalnia.exe
