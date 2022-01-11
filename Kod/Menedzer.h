@@ -8,7 +8,7 @@ using namespace std;
 #include "Pracownik.h"
 
 class Samochod;
-// class Pracownik;
+//class Pracownik;
 class Menedzer;
 
 class Menedzer: public Pracownik

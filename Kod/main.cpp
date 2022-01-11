@@ -3,6 +3,8 @@
 #include <string>
 #include <fstream>
 #include <locale.h>
+#include <conio.h>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -62,14 +64,36 @@ void przegladarka_samochodow() {
 void zarzadzaj_baza() {
 	system("CLS");
 	string haslo = "AGH";
-	string wpis;
+	char pass[32];
+	int g = 0;
+	char c;
 	cout << "Aby zarzadzac baza musisz sie zalogowac." << endl;
 	cout << "Login: Daniel Wółkowicz" << endl;
 	
-	while (haslo != wpis) {
+	while (haslo != pass) {
+
 		cout << "Hasło: ";
-		cin >> wpis;
-		cout << "Bledne haslo sprobuj ponownie." << endl;
+		for (g = 0;;)
+		{
+			c = _getch();
+			if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9'))
+			{
+				pass[g] = c;
+				++g;
+				cout << "*";
+			}
+			if (c == '\b' && g >= 1)//if backspace
+			{
+				cout << "\b \b";
+				--g;
+			}
+			if (c == '\r') //if enter
+			{
+				pass[g] = '\0';
+				break;
+			}
+		}
+		cout <<endl<< "Bledne haslo sprobuj ponownie." << endl;
 	}
 	Menedzer m1;
 Lista:
@@ -148,19 +172,43 @@ Wybor:
 }
 
 void wydawanie_samochodu() {
+
 	system("CLS");
 
 	Pracownik p1("Wojciech Michalik", "AGH");
 	string haslo = p1.get_haslo();
-	string wpis;
+	char pass[32];
+	int g = 0;
+	char c;
 
 	cout << "Aby wypelnic formularz wydania samochodu musisz sie zalogowac." << endl;
 	cout << "Login: " << p1.get_login() << endl;
 
-	while (haslo != wpis) {
+
+	while (haslo != pass) {
+
 		cout << "Hasło: ";
-		cin >> wpis;
-		cout << "Bledne haslo sprobuj ponownie." << endl;
+		for (g = 0;;)
+		{
+			c = _getch();
+			if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9'))
+			{
+				pass[g] = c;
+				++g;
+				cout << "*";
+			}
+			if (c == '\b' && g >= 1)//if backspace
+			{
+				cout << "\b \b";
+				--g;
+			}
+			if (c == '\r') //if enter
+			{
+				pass[g] = '\0';
+				break;
+			}
+		}
+		cout << endl << "Bledne haslo sprobuj ponownie." << endl;
 	}
 	system("CLS");
 	
@@ -171,17 +219,40 @@ void wydawanie_samochodu() {
 void odbieranie_samochodu() {
 	system("CLS");
 
-	Pracownik p1("Wojciech Michalik","AGH");
+	Pracownik p1("Wojciech Michalik", "AGH");
 	string haslo = p1.get_haslo();
-	string wpis;
+	char pass[32];
+	int g = 0;
+	char c;
 
-	cout << "Aby wypelnic formularz odbioru samochodu musisz sie zalogowac." << endl;
-	cout << "Login: " << p1.get_login()<< endl;
+	cout << "Aby wypelnic formularz wydania samochodu musisz sie zalogowac." << endl;
+	cout << "Login: " << p1.get_login() << endl;
 
-	while (haslo != wpis) {
+
+	while (haslo != pass) {
+
 		cout << "Hasło: ";
-		cin >> wpis;
-		cout << "Bledne haslo sprobuj ponownie." << endl;
+		for (g = 0;;)
+		{
+			c = _getch();
+			if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9'))
+			{
+				pass[g] = c;
+				++g;
+				cout << "*";
+			}
+			if (c == '\b' && g >= 1)//if backspace
+			{
+				cout << "\b \b";
+				--g;
+			}
+			if (c == '\r') //if enter
+			{
+				pass[g] = '\0';
+				break;
+			}
+		}
+		cout << endl << "Bledne haslo sprobuj ponownie." << endl;
 	}
 	system("CLS");
 
