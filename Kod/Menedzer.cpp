@@ -38,7 +38,7 @@ void Menedzer::dodaj_samochod() {
 	fstream zapis;
 	zapis.open("baza_samochodow.txt", ios::out | ios::app);
 
-	zapis << marka<<endl<<model<<endl<<ilosc_drzwi<<endl<<rodzaj_nadwozia<<endl<<numer_rejestracji<<endl<<cena_za_dobe << endl;
+	zapis << endl << marka<<endl<<model<<endl<<ilosc_drzwi<<endl<<rodzaj_nadwozia<<endl<<numer_rejestracji<<endl<<cena_za_dobe;
 
 	zapis.close();
 	
