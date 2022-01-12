@@ -188,3 +188,19 @@ void Menedzer::edytuj_samochod(Samochod samochod) {
 
 }
 
+
+Menedzer::Menedzer() {
+	this->login = "brak";
+	this->haslo = "brak";
+}
+
+Menedzer::Menedzer(string _login, string _haslo) {
+	this->login = _login;
+	this->haslo = _haslo;
+}
+string Menedzer::get_haslo() {
+	return haslo;
+}
+string Menedzer::get_login() {
+	return login;
+}

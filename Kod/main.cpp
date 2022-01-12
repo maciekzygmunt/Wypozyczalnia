@@ -62,13 +62,15 @@ void przegladarka_samochodow() {
 }
 
 void zarzadzaj_baza() {
+
 	system("CLS");
-	string haslo = "AGH";
+	Menedzer m("Daniel Wółkowicz", "AGH");
+	string haslo = m.get_haslo();
 	char pass[32];
 	int g = 0;
 	char c;
 	cout << "Aby zarzadzac baza musisz sie zalogowac." << endl;
-	cout << "Login: Daniel Wółkowicz" << endl;
+	cout << "Login: " << m.get_login() << endl;
 	
 	while (haslo != pass) {
 

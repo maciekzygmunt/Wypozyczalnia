@@ -11,14 +11,8 @@ hatchback
 KR51162
 50
 ford
-fiesta
+Focus
 4
 hatchback
-WA124O2
+WA12402
 60
-Opel
-Corsa
-3
-Combi
-PO29189
-45
