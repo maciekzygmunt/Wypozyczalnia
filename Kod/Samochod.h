@@ -39,7 +39,6 @@ class Samochod
 		string model;
 		int ilosc_drzwi;
 		string rodzaj_nadwozia;
-		Rezerwacja rezerwacje[10];
 		string numer_rejestracji;
 		int cena_za_dobe;
 

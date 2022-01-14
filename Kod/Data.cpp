@@ -31,3 +31,15 @@ void Data::zapisz() {
 
 	zapis.close();
 }
+
+int Data::get_rok() {
+	return rok;
+}
+
+int Data::get_miesiac() {
+	return miesiac;
+}
+
+int Data::get_dzien() {
+	return dzien;
+}

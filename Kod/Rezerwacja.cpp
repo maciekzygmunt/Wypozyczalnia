@@ -15,14 +15,16 @@ Rezerwacja::Rezerwacja() {
 	koniec_rezerwacji =  d2;
 	wypozyczenie = w1;
 	protokol = "";
+	numer_rejestracji = "";
 	koszt_rezerwacji = 0;
 }
 
-Rezerwacja::Rezerwacja(Data _poczatek, Data _koniec, Wypozyczenie _wypozyczenie, string _protokol, int _koszt_rezerwacji) {
+Rezerwacja::Rezerwacja(Data _poczatek, Data _koniec, Wypozyczenie _wypozyczenie, string _protokol,string _numer_rejestracji, int _koszt_rezerwacji) {
 	poczatek_rezerwacji = _poczatek;
 	koniec_rezerwacji = _koniec;
 	wypozyczenie = _wypozyczenie;
 	protokol = _protokol;
+	numer_rejestracji = _numer_rejestracji;
 	koszt_rezerwacji = _koszt_rezerwacji;
 }
 
@@ -39,10 +41,26 @@ void Rezerwacja::zmiana_terminu_najmu() {
 }
 
 int Rezerwacja::oblicz_koszt(int cena_za_dobe) {
-	int koszt = 120;
+	int koszt_calkowity=0;
+	int roznica_w_dniach=0;
 	//obliczanie kosztu na podstawie roznicy w dniach miedzy dwoma datami
+	int miesiace[12] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
-	return koszt;
+	if (poczatek_rezerwacji.get_rok() == koniec_rezerwacji.get_rok()) {
+		if (poczatek_rezerwacji.get_miesiac() == koniec_rezerwacji.get_miesiac()) {
+			koszt_calkowity = (koniec_rezerwacji.get_dzien() - poczatek_rezerwacji.get_dzien()) * cena_za_dobe;
+		}
+		else {
+			roznica_w_dniach += miesiace[poczatek_rezerwacji.get_miesiac()] - poczatek_rezerwacji.get_dzien();
+			for (int i = poczatek_rezerwacji.get_miesiac()+1; i < koniec_rezerwacji.get_miesiac(); i++) {
+				roznica_w_dniach += miesiace[i];
+			}
+			roznica_w_dniach += koniec_rezerwacji.get_dzien();
+			koszt_calkowity = roznica_w_dniach * cena_za_dobe;
+		}
+	}
+	
+	return koszt_calkowity;
 }
 
 int Rezerwacja::get_koszt() {

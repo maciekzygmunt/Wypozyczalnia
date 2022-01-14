@@ -39,7 +39,6 @@ class Klient
 		string numer_prawa_jazdy;
 		string adres_email;
 		string haslo;
-		Rezerwacja** rezerwacje;
 
 };
 

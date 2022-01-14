@@ -15,7 +15,7 @@ class Rezerwacja
 {
 	public:
 		Rezerwacja();
-		Rezerwacja(Data _poczatek, Data _koniec, Wypozyczenie _wypozyczenie, string _protokol, int _koszt_rezerwacji);
+		Rezerwacja(Data _poczatek, Data _koniec, Wypozyczenie _wypozyczenie, string _protokol,string _numer_rejestracji, int _koszt_rezerwacji);
 
 		void wypozycz();
 		void zwroc();
@@ -42,6 +42,7 @@ class Rezerwacja
 		Data koniec_rezerwacji;
 		Wypozyczenie wypozyczenie;
 		string protokol;
+		string numer_rejestracji;
 		int koszt_rezerwacji;
 
 };

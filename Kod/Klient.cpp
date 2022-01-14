@@ -89,8 +89,20 @@ Wybor:
 void Klient::zaplac(Rezerwacja rezerwacja) {
 	
 	int kwota_tranzakcji = rezerwacja.get_koszt();
-
+	string numer_karty, cvv, data_waznosci;
 	cout << "Kwota tranzakcji: " << kwota_tranzakcji << " zl" << endl;
 	cout << "Przejdz do strony platnosci" << endl;
 	system("pause");
+
+	cout << "Podaj numer karty: ";
+	cin >> numer_karty;
+	cout << "Podaj kod CVV: ";
+	cin >> cvv;
+	cout << "Podaj date waznosci karty: ";
+	cin >> data_waznosci;
+	system("CLS");
+	cout << "Zrealizowano platnosc." << endl;
+	cout << "Poprawnie dokonano rezrwacji." << endl;
+	system("pause");
+
 }

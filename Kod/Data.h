@@ -23,6 +23,10 @@ class Data
 		*/
 		void zapisz();
 
+		int get_rok();
+		int get_miesiac();
+		int get_dzien();
+
 	private:
 		int dzien;
 		int miesiac;
