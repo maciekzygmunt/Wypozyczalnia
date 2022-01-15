@@ -15,14 +15,12 @@ using namespace std;
 
 void menu_start();
 
-void filtruj_samochody() {
-
-}
-
 void przegladarka_samochodow() {
 	
 	system("CLS");
 	int wybor;
+	Klient k1;
+
 	cout << "0. Powrot." << endl;
 	cout << "Lista dostepnych samochodow:" << endl;
 
@@ -43,20 +41,27 @@ void przegladarka_samochodow() {
 		odczyt >> marka >> model >> ilosc_drzwi >> rodzaj_nadwozia >> numer_rejestracji >> cena_za_dobe;
 
 		flota_samochodow[i].set_samochod(marka, model, ilosc_drzwi, rodzaj_nadwozia, numer_rejestracji, cena_za_dobe);
-		
+		cout << i+1 << ". ";
 		flota_samochodow[i].wyswietl_pojazd();
 		
 		i++;
 	}
 	odczyt.close();
 
-	//filtrowanie!!
+	//filtrowanie (niski priorytet)
 
 	cout << "Aby zarezerwowac samochod wpisz jego numer" << endl;
-	
 	cout << "Wybor: ";
 	cin >> wybor;
+
 	if (wybor == 0) {
+		menu_start();
+	}
+	else {
+	
+		Rezerwacja nowa_rezerwacja = flota_samochodow[wybor - 1].zarezerwuj();
+		k1.zaplac(nowa_rezerwacja);
+		nowa_rezerwacja.zapisz();
 		menu_start();
 	}
 }

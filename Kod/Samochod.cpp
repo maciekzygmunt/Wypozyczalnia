@@ -8,7 +8,40 @@ using namespace std;
 #include "Rezerwacja.h"
 
 Rezerwacja Samochod::zarezerwuj() {
-	throw "Not yet implemented";
+	int dzien, miesiac, rok;
+	system("CLS");
+	cout << "Nowa rezerwacja" << endl;
+
+	cout << "Podaj date poczatku rezerwacji (dd mm rrrr): " << endl;
+	cin >> dzien >> miesiac >> rok;
+	while (rok != 2022) {
+		cout << "Mozesz dokonac rezerwacji jedynie na rok bierzacy" << endl;
+
+		cout << "Podaj date poczatku rezerwacji (dd mm rrrr): " << endl;
+		cin >> dzien >> miesiac >> rok;
+	}
+	Data poczatek_rezerwacji(dzien, miesiac, rok);
+
+	cout << "Podaj date konca rezerwacji (dd mm rrrr): " << endl;
+	cin >> dzien >> miesiac >> rok;
+	while (rok != 2022) {
+		cout << "Mozesz dokonac rezerwacji jedynie na rok bierzacy" << endl;
+
+		cout << "Podaj date konca rezerwacji (dd mm rrrr): " << endl;
+		cin >> dzien >> miesiac >> rok;
+	}
+	Data koniec_rezerwacji(dzien, miesiac, rok);
+
+	Wypozyczenie brak;
+	Rezerwacja nowa_rezerwacja(poczatek_rezerwacji, koniec_rezerwacji, brak, "Brak protokolu",numer_rejestracji, cena_za_dobe);
+	int koszt = nowa_rezerwacja.oblicz_koszt(cena_za_dobe);
+	Rezerwacja nowa_rezerwacja_koszt_calkowity(poczatek_rezerwacji, koniec_rezerwacji, brak, "Brak protokolu",numer_rejestracji, koszt);
+
+	cout << "Koszt twojej rezerwacji samochodu " << marka << " " << model << " to: " << koszt << endl; 
+	system("pause");
+	system("CLS");
+
+	return nowa_rezerwacja_koszt_calkowity;
 }
 
 void Samochod::wyswietl_pojazd() {

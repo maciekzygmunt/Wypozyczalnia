@@ -9,6 +9,14 @@ using namespace std;
 #include "Klient.h"
 #include "Rezerwacja.h"
 
+/**
+* Sprawdza czy podany w argumencie email jest zgodny z wyra¿eniem regularnym i zwraca wartoœæ logiczna prawda lub fa³sz.
+* <p>
+* Funkcja sprawdza czy w podanym ci¹gu znaków wystêpuja kolejno "@"  i "." oddizelone przynajmiej jednym znakiem.
+* 
+* @param email adres email zapisany w zmiennej typu string
+* @return bool wartoœæ logiczna prawda lub fa³sz
+*/
 bool czy_email_poprawny(const string& email) {
 
 	// define a regular expression
@@ -58,7 +66,7 @@ Wybor:
 			fstream zapis;
 			zapis.open("baza_klientow.txt", ios::out | ios::app);
 
-			zapis << imie << endl << nazwisko << endl << adres_email << endl << haslo << endl << numer_prawa_jazdy << endl;
+			zapis << imie << endl << nazwisko << endl << email << endl << haslo << endl << nr_prawa_jazdy << endl;
 
 			zapis.close();
 
@@ -79,5 +87,22 @@ Wybor:
 }
 
 void Klient::zaplac(Rezerwacja rezerwacja) {
-	throw "Not yet implemented";
+	
+	int kwota_tranzakcji = rezerwacja.get_koszt();
+	string numer_karty, cvv, data_waznosci;
+	cout << "Kwota tranzakcji: " << kwota_tranzakcji << " zl" << endl;
+	cout << "Przejdz do strony platnosci" << endl;
+	system("pause");
+
+	cout << "Podaj numer karty: ";
+	cin >> numer_karty;
+	cout << "Podaj kod CVV: ";
+	cin >> cvv;
+	cout << "Podaj date waznosci karty: ";
+	cin >> data_waznosci;
+	system("CLS");
+	cout << "Zrealizowano platnosc." << endl;
+	cout << "Poprawnie dokonano rezrwacji." << endl;
+	system("pause");
+
 }

@@ -1,0 +1,88 @@
+12
+2
+2022
+12
+4
+2022
+Brak protokolu
+0
+12
+12
+1111
+28
+1
+1222
+Brak protokolu
+120
+12
+3
+1221
+13
+3
+1221
+Brak protokolu
+120
+22
+8
+2019
+23
+8
+2020
+Brak protokolu
+120
+1
+0
+-858993460
+1
+0
+-858993460
+Brak protokolu
+120
+1
+12
+1324
+2
+12
+2020
+Brak protokolu
+120
+11
+1
+2022
+22
+1
+2022
+Brak protokolu
+120
+12
+2
+1324
+12
+3
+1243
+Brak protokolu
+120
+24
+12
+2077
+25
+12
+2077
+Brak protokolu
+120
+12
+3
+2022
+22
+3
+2022
+Brak protokolu
+600
+12
+3
+2022
+12
+4
+2022
+Brak protokolu
+1500

@@ -12,7 +12,8 @@ class Wypozyczenie
 	private:
 		Data data_wypozyczenia;
 		Data data_zwrotu;
-
+	public:
+		Wypozyczenie();
 };
 
 #endif
