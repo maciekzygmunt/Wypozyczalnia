@@ -9,6 +9,7 @@ using namespace std;
 #include "Pracownik.h"
 
 void Menedzer::dodaj_samochod() {
+	Samochod flota_samochodow[100];
 	string marka;
 	string model;
 	int ilosc_drzwi;
@@ -16,6 +17,21 @@ void Menedzer::dodaj_samochod() {
 	string numer_rejestracji;
 	int cena_za_dobe;
 
+	//tworzenie tablicy z pliku txt
+	ifstream odczyt("baza_samochodow.txt");
+
+	int i = 0;
+	while (!odczyt.eof()) {
+
+		odczyt >> marka >> model >> ilosc_drzwi >> rodzaj_nadwozia >> numer_rejestracji >> cena_za_dobe;
+
+		flota_samochodow[i].set_samochod(marka, model, ilosc_drzwi, rodzaj_nadwozia, numer_rejestracji, cena_za_dobe);
+
+		i++;
+	}
+	odczyt.close();
+Wpis:
+	system("CLS");
 	cout << "Marka samochodu:" << endl;
 	cin >> marka;
 	cout << endl;
@@ -34,6 +50,14 @@ void Menedzer::dodaj_samochod() {
 	cout << "Cena za dobe:" << endl;
 	cin >> cena_za_dobe;
 	cout << endl;
+
+	for (int i = 0; i < 100; i++) {
+		if (flota_samochodow[i].get_numer_rejestracji() == numer_rejestracji) {
+			cout << "Samochod o podanej rejestracji juz istanieje! Sprobuj ponownie."<<endl;
+			system("pause");
+			goto Wpis;
+		}
+	}
 
 	fstream zapis;
 	zapis.open("baza_samochodow.txt", ios::out | ios::app);
