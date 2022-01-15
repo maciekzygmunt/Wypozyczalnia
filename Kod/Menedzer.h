@@ -11,21 +11,27 @@ class Samochod;
 class Pracownik;
 class Menedzer;
 
+/**
+* Klasa obsluguje przypadki uzycia Menedzera. 
+*<p>
+* Klasa Menedzer dziedziczy po klasie Pracownik. Opowiada za zarzadzanie baza pojazdow - dodawanie, usuwanie, edycje juz istniejacych.
+* @author Maciej Zygmunt
+* @version 1.0
+*/
 class Menedzer: public Pracownik
 {
 	public:
 		/**
-		* Konstruktor domyslny klasy menedzer
+		* Konstruktor domyslny klasy Menedzer
 		* <p>
-		* Tworzy nowy obiekt klasy menedzer
-		* 
+		* Tworzy nowy obiekt klasy Menedzer
 		*/
 		Menedzer();
 
 		/**
-		* Konstruktor wielkoarugemntowy
+		* Konstruktor parametryczny
 		* <p>
-		* Przyjmuje login i haslo jako argumenty a nastepnie tworzy obiekt klasy menedzer z podanymi argumentami
+		* Przyjmuje login i haslo jako argumenty a nastepnie tworzy obiekt klasy Menedzer z podanymi argumentami
 		*
 		* @param _login login menedzera
 		* @param _haslo haslo menedzera

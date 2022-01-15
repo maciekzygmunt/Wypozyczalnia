@@ -6,10 +6,31 @@ using namespace std;
 
 class Data;
 
+/**
+* Klasa obsluguje daty uzywane w {@link Rezerwacja} i {@link Wypozyczenie}.
+*<p>
+* Zawiera metody obslugujace zapisywanie daty do pliku oraz gettery do kazdego pola.
+* @author Michal Wojcik
+* @version 1.0
+*/
 class Data
 {
 	public:
+		/**
+		* Konstruktor domyslny klasy Data
+		* <p>
+		* Tworzy nowy obiekt klasy Data
+		*/
 		Data();
+
+		/**
+		* Konstruktor parametryczny
+		* <p>
+		* Przyjmuje dzien, miesiac i rok jako argumenty a nastepnie tworzy obiekt klasy Data z podanymi argumentami.
+		* @param _dzien dzien miesiaca
+		* @param _miesiac numer miesiaca
+		* @param _rok rok
+		*/
 		Data(int _dzien, int _miesiac, int _rok);
 
 		void wyswietl_date(Data data);
@@ -17,8 +38,8 @@ class Data
 		/**
 		* Zapisuje obiekt typu data do pliku baza_rezerwacji.txt
 		* <p>
-		* Metoda otwiera strumieñ wyjœciowy na plik baza_rezerwacji.txt. Zapisuje kolejno dzieñ, miesi¹c i rok w kolejnych wierszach pliku,
-		* po czym zamyka strumieñ. Metoda uzywana do zapisu do pliku obiektów typu {@link Rezerwacja} i {@link Wypo¿yczenie}.
+		* Metoda otwiera strumien wyjsciowy na plik baza_rezerwacji.txt. Zapisuje kolejno dzien, miesi¹c i rok w kolejnych wierszach pliku,
+		* po czym zamyka strumien. Metoda uzywana do zapisu do pliku obiektów typu {@link Rezerwacja} i {@link Wypo¿yczenie}.
 		* @return void
 		*/
 		void zapisz();

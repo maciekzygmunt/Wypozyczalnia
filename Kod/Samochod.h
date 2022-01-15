@@ -10,6 +10,15 @@ using namespace std;
 class Rezerwacja;
 class Samochod;
 
+/**
+* Klasa reprezentuje samochod nalezacy do floty wypozyczalni.
+*<p>
+* Zawiera metody obslugujace dokonywanie nowej rezerwacji, wyswietlania obiektu klasy Samochod. Posiada komplet getterow i 
+* setter wszystkich pol. Posiada metode przeciazajaca operator porownania.
+* @author Michal Wojcik
+* @author Maciej Zygmunt
+* @version 1.0
+*/
 class Samochod
 {
 	public:
@@ -24,7 +33,8 @@ class Samochod
 		/**
 		* Funkcja sluzaca do wyswietlenia samochodu
 		* <p>
-		* Funkcja tworzy tablice samochodow z pliku baza_samochodow.txt, nastepnie usuwa z niej element przekazany jako parametr, oraz czysci plik txt i nadpisuje go nowa wersja
+		* Funkcja tworzy tablice samochodow z pliku baza_samochodow.txt, 
+		* nastepnie usuwa z niej element przekazany jako parametr, oraz czysci plik txt i nadpisuje go nowa wersja
 		*
 		* @param samochod typu Samochod
 		* @return void

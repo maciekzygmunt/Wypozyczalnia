@@ -12,22 +12,29 @@ class Samochod;
 class Rezerwacja;
 class Pracownik;
 
+/**
+* Klasa obsluguje przypadki uzycia Pracownika.
+*<p>
+* Klasa Pracownik  odpowiada za wydawanie, odbieranie pojazdow oraz zmiane terminow rezerwacji.
+* @author Maciej Zygmunt
+* @version 1.0
+*/
 class Pracownik
 {
 	public:
 
 		/**
-		* Konstruktor domyslny klasy pracownik
+		* Konstruktor domyslny klasy Pracownik
 		* <p>
-		* Tworzy nowy obiekt klasy pracownik
+		* Tworzy nowy obiekt klasy Pracownik
 		*
 		*/
 		Pracownik();
 
 		/**
-		* Konstruktor wielkoarugemntowy
+		* Konstruktor parametryczny
 		* <p>
-		* Przyjmuje login i haslo jako argumenty a nastepnie tworzy obiekt klasy pracownik z podanymi argumentami
+		* Przyjmuje login i haslo jako argumenty a nastepnie tworzy obiekt klasy Pracownik z podanymi argumentami
 		*
 		* @param _login login pracownika
 		* @param _haslo haslo pracownika
