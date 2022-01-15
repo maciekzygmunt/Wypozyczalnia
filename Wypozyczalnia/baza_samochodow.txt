@@ -1,3 +1,9 @@
+Peugeot
+206rs
+5
+Hatchback
+GD54321
+200
 fiat
 punto
 4
@@ -5,14 +11,8 @@ hatchback
 KR51162
 50
 ford
-fiesta
+Focus
 4
 hatchback
-WA124O2
+WA12402
 60
-opel
-corsa
-2
-combi
-PO29189
-30

@@ -96,3 +96,18 @@ void Pracownik::zmiana_terminu_najmu(Rezerwacja rezerwacja) {
 	throw "Not yet implemented";
 }
 
+string Pracownik::get_haslo() {
+	return haslo;
+}
+string Pracownik::get_login() {
+	return login;
+}
+
+Pracownik::Pracownik(string _login, string _haslo) {
+	this->login = _login;
+	this->haslo = _haslo;
+}
+Pracownik::Pracownik() {
+	this->login = "brak";
+	this->haslo = "brak";
+}
