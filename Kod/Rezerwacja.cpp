@@ -75,7 +75,7 @@ void Rezerwacja::zapisz() {
 	fstream zapis;
 	zapis.open("baza_rezerwacji.txt", ios::out | ios::app);
 
-	zapis << protokol << endl << koszt_rezerwacji << endl;
+	zapis << protokol << endl << numer_rejestracji << endl << koszt_rezerwacji << endl;
 
 	zapis.close();
 }

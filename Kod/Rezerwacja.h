@@ -20,6 +20,14 @@ class Rezerwacja
 		void wypozycz();
 		void zwroc();
 		void zmiana_terminu_najmu();
+
+		/**
+		* Oblicza koszt rezerwacji.
+		*<p>
+		* Metoda oblicza koszt na podstawie ró¿nocy w dniach pomiedzy dat¹ koñca a data poczatku rezerwacji.
+		* @param cena_za_dobe cena za dobe najmu pojazdu, wyrazona w PLN
+		* @return int koszt ca³kowity rezerwacji
+		*/
 		int oblicz_koszt(int cena_za_dobe);
 
 		/**

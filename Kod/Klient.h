@@ -27,7 +27,8 @@ class Klient
 		/**
 		* Realizuje p³atnoœæ online, op³acaj¹c rezerwacje podan¹ w argumencie.
 		* <p>
-		*
+		* Metoda realizuje tranzakcjê online przy pomocy karty p³atniczej i zewnetrznego operatora. Metoda pyta u¿ytkownika o dane karty
+		* p³atniczej.
 		* @param rezerwacja obiekt typu Rezerwacja {@link Rezerwacja}
 		* @return void
 		*/

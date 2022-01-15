@@ -23,8 +23,22 @@ class Data
 		*/
 		void zapisz();
 
+		/**
+		* Zwaraca wartoœc pola rok.
+		* @return rok liczba typu int
+		*/
 		int get_rok();
+
+		/**
+		* Zwaraca wartoœc pola miesiac.
+		* @return miesiac liczba typu int, liczba od 1 do 12, oznacza miesiace od stycznia do grudnia
+		*/
 		int get_miesiac();
+
+		/**
+		* Zwaraca wartoœc pola dzien.
+		* @return dzien liczba typu int
+		*/
 		int get_dzien();
 
 	private:
