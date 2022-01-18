@@ -313,7 +313,7 @@ void menu_start() {
 		zarzadzaj_baza();
 		break;
 	case 7:
-		exit;
+		exit(0);
 		break;
 	default:
 		cout << "Wybrano nieprawidlowa opcje!" << endl;

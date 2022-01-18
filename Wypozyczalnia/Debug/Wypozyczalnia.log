@@ -1,2 +1,10 @@
-﻿  Menedzer.cpp
-  Wypozyczalnia.vcxproj -> D:\Studia\Wypozyczalnia\Wypozyczalnia\Debug\Wypozyczalnia.exe
+﻿  Data.cpp
+  Klient.cpp
+  main.cpp
+  Menedzer.cpp
+  Pracownik.cpp
+  Rezerwacja.cpp
+  Samochod.cpp
+  Wypozyczenie.cpp
+  Generowanie kodu...
+  Wypozyczalnia.vcxproj -> C:\Users\wojci\OneDrive\Dokumenty\Wypozyczalnia_samochodow\Projekt\Debug\Wypozyczalnia.exe
