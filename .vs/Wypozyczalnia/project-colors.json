@@ -10,7 +10,12 @@
       "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
       "DisplayName": "Różne pliki",
       "ColorIndex": -1
+    },
+    "8d5cd706-e289-4790-af12-c1603a9a3c23": {
+      "ProjectGuid": "8d5cd706-e289-4790-af12-c1603a9a3c23",
+      "DisplayName": "Testy jednostkowe",
+      "ColorIndex": 1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }

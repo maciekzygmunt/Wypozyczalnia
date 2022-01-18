@@ -1,3 +1,4 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(510,5): warning MSB8028: Katalog pośredni (Debug\) zawiera pliki udostępnione z innego projektu (Wypozyczalnia_test1.vcxproj). Może to spowodować niepoprawne zachowanie podczas oczyszczania i ponownej kompilacji.
-  test_Samochod.cpp
-  Wypozyczalnia_test1.vcxproj -> C:\Users\wojci\OneDrive\Dokumenty\Wypozyczalnia_samochodow\Projekt\Debug\Testy jednostkowe.dll
+  test_Rezerwacja.cpp
+     Trwa tworzenie biblioteki D:\Studia\Wypozyczalnia\Wypozyczalnia\Debug\Testy jednostkowe.lib i obiektu D:\Studia\Wypozyczalnia\Wypozyczalnia\Debug\Testy jednostkowe.exp
+  Wypozyczalnia_test1.vcxproj -> D:\Studia\Wypozyczalnia\Wypozyczalnia\Debug\Testy jednostkowe.dll
