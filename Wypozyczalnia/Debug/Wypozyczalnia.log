@@ -1,10 +1,6 @@
-﻿  Data.cpp
-  Klient.cpp
-  main.cpp
-  Menedzer.cpp
+﻿  Menedzer.cpp
   Pracownik.cpp
-  Rezerwacja.cpp
   Samochod.cpp
-  Wypozyczenie.cpp
+  main.cpp
   Generowanie kodu...
   Wypozyczalnia.vcxproj -> C:\Users\wojci\OneDrive\Dokumenty\Wypozyczalnia_samochodow\Projekt\Debug\Wypozyczalnia.exe

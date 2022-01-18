@@ -79,7 +79,7 @@ void zarzadzaj_baza() {
 	
 	while (haslo != pass) {
 
-		cout << "Hasło: ";
+		cout << "Hasło (AGH): ";
 		for (g = 0;;)
 		{
 			c = _getch();
@@ -194,7 +194,7 @@ void wydawanie_samochodu() {
 
 	while (haslo != pass) {
 
-		cout << "Hasło: ";
+		cout << "Hasło (AGH): ";
 		for (g = 0;;)
 		{
 			c = _getch();
@@ -238,7 +238,7 @@ void odbieranie_samochodu() {
 
 	while (haslo != pass) {
 
-		cout << "Hasło: ";
+		cout << "Hasło (AGH): ";
 		for (g = 0;;)
 		{
 			c = _getch();

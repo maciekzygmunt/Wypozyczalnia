@@ -51,7 +51,7 @@ int Rezerwacja::oblicz_koszt(int cena_za_dobe) {
 			koszt_calkowity = (koniec_rezerwacji.get_dzien() - poczatek_rezerwacji.get_dzien()) * cena_za_dobe;
 		}
 		else {
-			roznica_w_dniach += miesiace[poczatek_rezerwacji.get_miesiac()] - poczatek_rezerwacji.get_dzien();
+			roznica_w_dniach += miesiace[poczatek_rezerwacji.get_miesiac()-1] - poczatek_rezerwacji.get_dzien();
 			for (int i = poczatek_rezerwacji.get_miesiac()+1; i < koniec_rezerwacji.get_miesiac(); i++) {
 				roznica_w_dniach += miesiace[i];
 			}

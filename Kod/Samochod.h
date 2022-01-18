@@ -25,7 +25,9 @@ class Samochod
 		/**
 		* Realizuje utworzenie nowej rezerwacji i informuje klienta o cenie najmu.
 		* <p>
-		* Metoda pyta klienta o dane rezerwacji, a nastêpnie wyswietla jej koszt. Mozliwe jest dokonanie rezerwacji jedynie na rok 2022.
+		* Metoda pyta klienta o dane rezerwacji, a nastêpnie wyswietla jej koszt. 
+		* Mozliwe jest dokonanie rezerwacji jedynie na rok 2022.
+		* Posiada konrole poprawnosci wprowadzanej daty.
 		* @return Rezerwacja obiekt klasy {@link Rezerwacja}
 		*/
 		Rezerwacja zarezerwuj();
