@@ -2,10 +2,10 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\wojci\OneDrive\Dokumenty\Wypozyczalnia_samochodow\Projekt\Debug\Wypozyczalnia.exe</FullPath>
+      <FullPath>D:\Studia\Wypozyczalnia\Wypozyczalnia\Debug\Wypozyczalnia.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>C:\Users\wojci\OneDrive\Dokumenty\Wypozyczalnia_samochodow\Projekt\Debug\Testy jednostkowe.dll</FullPath>
+      <FullPath>D:\Studia\Wypozyczalnia\Wypozyczalnia\Debug\Testy jednostkowe.dll</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />
