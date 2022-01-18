@@ -40,7 +40,7 @@ namespace testy_Rezerwacja
 			Data d2(5, 1, 2022);
 			Wypozyczenie w1;
 			Rezerwacja r1(d1, d2, w1, "", "", 0);
-			Assert::AreEqual(360, r1.oblicz_koszt(60));
+			Assert::AreEqual(0, r1.oblicz_koszt(60));
 		}
 		TEST_METHOD(test_oblicz_koszt3) {
 			Data d1(30, 1, 2022);
